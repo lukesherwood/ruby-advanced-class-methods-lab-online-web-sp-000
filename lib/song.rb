@@ -44,10 +44,9 @@ class Song
     #remove .mp3
     song_name.gsub!(".mp3", "")
     #split on "-"
-    song_array = []
     song_array = song_name.split(" - ")
     #song.create_by_name = array[1]
-    song = self.create_by_name(song_array[1])
+    song = self.new
     song.name= song_array[1]
     #set array[0] to song.artist_name
     song.artist_name = song_array[0]
@@ -59,7 +58,6 @@ class Song
     #remove .mp3
     song_name.gsub!(".mp3", "")
     #split on "-"
-    song_array = []
     song_array = song_name.split(" - ")
     #song.create_by_name = array[1]
     song = self.create
